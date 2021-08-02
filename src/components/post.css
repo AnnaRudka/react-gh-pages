@@ -1,0 +1,78 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container_item {
+  padding: 0px 50px;
+}
+.post_conteiner {
+  padding: 10px;
+  min-height: 300px;
+  border: #adff2f 2px solid;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: rgb(32, 6, 51);
+  color: aliceblue;
+}
+
+.post-header,
+.autor-info {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.autor_photo {
+  padding: 0px 10px;
+}
+
+.photo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid greenyellow;
+}
+.picture {
+  padding: 5px;
+  width: 100%;
+  border-radius: 20px;
+}
+.picture_container {
+  padding: 0px 25px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.info-item {
+  padding: 7px;
+}
+
+.post-text {
+  padding-left: 7px;
+  font-size: 20px;
+}
+.name {
+  color: greenyellow;
+  font-weight: 600;
+}
+.nickname,
+.date {
+  color: rgb(161, 161, 161);
+}
+
+.post_details span {
+  font-size: 14px;
+  color: greenyellow;
+  padding: 0 8px;
+}
+
+.post_details {
+  padding: 5px 30px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.details-icon {
+  margin-bottom: -4px;
+}

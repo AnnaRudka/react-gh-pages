@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.83e46b2e.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.19b845cb.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.19b845cb.chunk.js.map",
-    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.caabdeb5.js",
-    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.caabdeb5.js.map",
-    "static/js/2.388db63f.chunk.js": "/react-gh-pages/static/js/2.388db63f.chunk.js",
-    "static/js/2.388db63f.chunk.js.map": "/react-gh-pages/static/js/2.388db63f.chunk.js.map",
-    "static/js/3.60e4ee80.chunk.js": "/react-gh-pages/static/js/3.60e4ee80.chunk.js",
-    "static/js/3.60e4ee80.chunk.js.map": "/react-gh-pages/static/js/3.60e4ee80.chunk.js.map",
+    "main.css": "/react-gh-pages/static/css/main.5d9c69a4.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.983fefb6.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.983fefb6.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.7051aba5.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.7051aba5.js.map",
+    "static/js/2.4677e311.chunk.js": "/react-gh-pages/static/js/2.4677e311.chunk.js",
+    "static/js/2.4677e311.chunk.js.map": "/react-gh-pages/static/js/2.4677e311.chunk.js.map",
+    "static/js/3.6cb8200d.chunk.js": "/react-gh-pages/static/js/3.6cb8200d.chunk.js",
+    "static/js/3.6cb8200d.chunk.js.map": "/react-gh-pages/static/js/3.6cb8200d.chunk.js.map",
     "index.html": "/react-gh-pages/index.html",
-    "static/css/main.83e46b2e.chunk.css.map": "/react-gh-pages/static/css/main.83e46b2e.chunk.css.map",
-    "static/js/2.388db63f.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.388db63f.chunk.js.LICENSE.txt",
+    "static/css/main.5d9c69a4.chunk.css.map": "/react-gh-pages/static/css/main.5d9c69a4.chunk.css.map",
+    "static/js/2.4677e311.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.4677e311.chunk.js.LICENSE.txt",
     "static/media/mem1.356d857a.jpg": "/react-gh-pages/static/media/mem1.356d857a.jpg",
     "static/media/mem2.6e334b7a.jpeg": "/react-gh-pages/static/media/mem2.6e334b7a.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.caabdeb5.js",
-    "static/js/2.388db63f.chunk.js",
-    "static/css/main.83e46b2e.chunk.css",
-    "static/js/main.19b845cb.chunk.js"
+    "static/js/runtime-main.7051aba5.js",
+    "static/js/2.4677e311.chunk.js",
+    "static/css/main.5d9c69a4.chunk.css",
+    "static/js/main.983fefb6.chunk.js"
   ]
 }

@@ -61,38 +61,36 @@ const contacts = [
 ];
 
 const Contacts = () => {
+  const initialState = [true, true, true];
   const [items, setItems] = useState(contacts);
   const [search, setSearch] = useState("");
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(initialState);
+  const genders = ["male", "female", undefined];
+
+  const onChangeHandler = (e) => {
+    const actualChecked = checked.map((item, index) =>
+      index === +e.target.value ? (item = e.target.checked) : item
+    );
+    setChecked(actualChecked);
+  };
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
   };
 
-  const onChangeHandler = (e) => {
-    setChecked(e.target.checked);
-    const gender = e.target.value;
-    if (gender === "male") {
-      const filteredContact = contacts.filter((contact) => {
-        if (!contact.gender) return true;
-        return contact.gender === "female";
-      });
-      setItems(filteredContact);
-    }
-    if (gender === "female") {
-      const filteredContact = contacts.filter((contact) => {
-        if (!contact.gender) return true;
-        return contact.gender === "male";
-      });
-      setItems(filteredContact);
-    }
-    if (gender === "notSpecifided") {
-      const filteredContact = contacts.filter((contact) => {
-        return contact.gender === "male" || contact.gender === "female";
-      });
-      setItems(filteredContact);
-    }
-  };
+  useEffect(() => {
+    const checkedContacts = [];
+    checked.forEach((item, index) => {
+      if (item) {
+        contacts.forEach((contact) => {
+          if (contact.gender === genders[index]) {
+            checkedContacts.push(contact);
+          }
+        });
+      }
+    });
+    setItems(checkedContacts);
+  }, [checked]);
 
   useEffect(() => {
     const filteredContacts = contacts.filter((contact) => {
@@ -125,8 +123,8 @@ const Contacts = () => {
                 onChange={onChangeHandler}
                 type="checkbox"
                 id="checkboxOne"
-                value="male"
-                checked={checked}
+                value="0"
+                checked={checked[0]}
               ></input>
               <label htmlFor="checkboxOne">male</label>
             </li>
@@ -134,9 +132,9 @@ const Contacts = () => {
               <input
                 type="checkbox"
                 id="checkboxTwo"
-                value="female"
+                value="1"
                 onChange={onChangeHandler}
-                checked={checked}
+                checked={checked[1]}
               ></input>
               <label htmlFor="checkboxTwo">female</label>
             </li>
@@ -144,9 +142,9 @@ const Contacts = () => {
               <input
                 type="checkbox"
                 id="checkboxThree"
-                value="notSpecifided"
+                value="2"
                 onChange={onChangeHandler}
-                checked={checked}
+                checked={checked[2]}
               ></input>
               <label htmlFor="checkboxThree">not specifided</label>
             </li>

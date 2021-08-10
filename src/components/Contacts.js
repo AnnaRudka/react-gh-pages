@@ -66,7 +66,26 @@ const Contacts = () => {
   const [search, setSearch] = useState("");
   const [checked, setChecked] = useState(initialState);
   const genders = ["male", "female", undefined];
-
+  const inputItems = [
+    {
+      id: "checkboxOne",
+      value: "0",
+      checked: checked[0],
+      labelhtml: "male",
+    },
+    {
+      id: "checkboxTwo",
+      value: "1",
+      checked: checked[1],
+      labelhtml: "female",
+    },
+    {
+      id: "checkboxThree",
+      value: "2",
+      checked: checked[2],
+      labelhtml: "not specifided",
+    },
+  ];
   const onChangeHandler = (e) => {
     const actualChecked = checked.map((item, index) =>
       index === +e.target.value ? (item = e.target.checked) : item
@@ -118,36 +137,18 @@ const Contacts = () => {
         </div>
         <div className="checkbox">
           <ul className="ks-cboxtags">
-            <li>
-              <input
-                onChange={onChangeHandler}
-                type="checkbox"
-                id="checkboxOne"
-                value="0"
-                checked={checked[0]}
-              ></input>
-              <label htmlFor="checkboxOne">male</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                id="checkboxTwo"
-                value="1"
-                onChange={onChangeHandler}
-                checked={checked[1]}
-              ></input>
-              <label htmlFor="checkboxTwo">female</label>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                id="checkboxThree"
-                value="2"
-                onChange={onChangeHandler}
-                checked={checked[2]}
-              ></input>
-              <label htmlFor="checkboxThree">not specifided</label>
-            </li>
+            {inputItems.map((item) => (
+              <li key={item.id}>
+                <input
+                  onChange={onChangeHandler}
+                  type="checkbox"
+                  id={item.id}
+                  value={item.value}
+                  checked={item.checked}
+                ></input>
+                <label htmlFor={item.id}> {item.labelhtml}</label>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

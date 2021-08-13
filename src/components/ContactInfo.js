@@ -3,10 +3,9 @@ import "./style/contact-info.css";
 import RUDKA_PHOTO from "../images/anna_photo1.jpg";
 
 const ContactInfo = ({ contact }) => {
+  
   const closeInfoContainer = () => {
     console.log("remove");
-    let chat = document.querySelector(".info-container");
-    chat.remove();
   };
 
   return (

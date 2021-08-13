@@ -1,44 +1,70 @@
-import Post from "./components/Post";
-import MEM_FIRST from "./images/mem1.jpg";
-import MEM_SECOND from "./images/mem2.jpeg";
-import RUDKA_PHOTO from "./images/anna_photo1.jpg";
-
-const posts = [
-  {
-    id: 0,
-    name: "Anna Rudka",
-    photo: RUDKA_PHOTO,
-    nickname: "@kucherjashka",
-    content: "After first homework in React:",
-    image: MEM_FIRST,
-    date: "28.07.2021",
-    comments: 24,
-    reposts: 15,
-    likes: 89,
-  },
-  {
-    id: 1,
-    name: "Anna Rudka",
-    photo: RUDKA_PHOTO,
-    nickname: "@kucherjashka",
-    content: "After second homework...",
-    image: MEM_SECOND,
-    date: "31.07.2021",
-    comments: 51,
-    reposts: 34,
-    likes: 105,
-  },
-];
+import React from "react";
+import "./app.css";
+import { HashRouter as Router, NavLink, Route, Switch } from "react-router-dom";
+import Posts from "./components/Posts";
+import Contacts from "./components/Contacts";
+import HomeComponent from "./components/HomeComponent";
+import Photos from "./components/Photos";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faClone,
+  faCamera,
+  faAddressCard,
+} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container_posts">
-        {posts.map((post, index) => (
-          <Post {...post} key={index} />
-        ))}
+    <Router>
+      <div className="App">
+        <nav className="nav-container">
+          <NavLink
+            exact
+            to="/"
+            className="link-item"
+            activeClassName="selected"
+          >
+            <FontAwesomeIcon icon={faHome} />
+            HOME
+          </NavLink>
+
+          <NavLink to="/posts" className="link-item" activeClassName="selected">
+            <FontAwesomeIcon icon={faClone} />
+            POSTS
+          </NavLink>
+          <NavLink
+            to="/photos"
+            className="link-item"
+            activeClassName="selected"
+          >
+            <FontAwesomeIcon icon={faCamera} />
+            PHOTOS
+          </NavLink>
+          <NavLink
+            to="/contacts"
+            className="link-item"
+            activeClassName="selected"
+          >
+            <FontAwesomeIcon icon={faAddressCard} />
+            CONTACTS
+          </NavLink>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <HomeComponent />
+          </Route>
+          <Route path="/posts">
+            <Posts />
+          </Route>
+          <Route path="/photos">
+            <Photos />
+          </Route>
+          <Route path="/contacts">
+            <Contacts />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 

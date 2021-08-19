@@ -6,7 +6,6 @@ const ContactInfo = ({ contact }) => {
   const [showInfo, setShowInfo] = useState(true);
 
   const closeInfoContainer = () => {
-    console.log("remove");
     setShowInfo(false);
   };
 

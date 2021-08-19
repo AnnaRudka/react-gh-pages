@@ -1,0 +1,27 @@
+.home-container {
+  height: 100vh;
+  padding: 0 90px;
+  background-color: rgb(7, 50, 85);
+}
+
+.home-content {
+  padding: 100px;
+  background-image: url("../icons/fon.jpg");
+  color: white;
+  text-align: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-link {
+  color: skyblue;
+}

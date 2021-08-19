@@ -1,0 +1,104 @@
+* {
+  transition: 0.3s;
+}
+
+.scene {
+  margin-top: 80px;
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(7, 84, 114);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scene:hover {
+  transform: scale(1.3);
+}
+
+.scene:hover .side {
+  opacity: 1;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  animation: rotate 15s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.side {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  opacity: 0.95;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.back {
+  transform: translateZ(-150px) rotateX(180deg);
+  background-image: url("https://source.unsplash.com/featured/?nature");
+}
+
+.left {
+  transform: translateX(-150px) rotateY(90deg);
+  background-image: url("https://source.unsplash.com/featured/?tree");
+}
+
+.right {
+  transform: translateX(150px) rotateY(90deg);
+  background-image: url("https://source.unsplash.com/featured/?home");
+}
+
+.top {
+  transform: translateY(-150px) rotateX(90deg);
+  background-image: url("https://source.unsplash.com/featured/?car");
+}
+
+.bottom {
+  transform: translateY(150px) rotateX(270deg);
+  background-image: url("https://source.unsplash.com/featured/?work");
+}
+
+.front {
+  transform: translateZ(150px);
+  background-image: url("https://source.unsplash.com/featured/?");
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0);
+  }
+  12.5% {
+    transform: rotateY(90deg);
+  }
+  25% {
+    transform: rotateY(270deg);
+  }
+  37.5% {
+    transform: rotateY(270deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  62.5% {
+    transform: rotateX(90deg);
+  }
+  75% {
+    transform: rotateX(180deg);
+  }
+  87.5% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}

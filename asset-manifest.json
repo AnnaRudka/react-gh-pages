@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/react-gh-pages/static/css/main.5131aa9a.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.f7d215b4.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.f7d215b4.chunk.js.map",
-    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.5d2b683f.js",
-    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.5d2b683f.js.map",
-    "static/js/2.a5fc89d0.chunk.js": "/react-gh-pages/static/js/2.a5fc89d0.chunk.js",
-    "static/js/2.a5fc89d0.chunk.js.map": "/react-gh-pages/static/js/2.a5fc89d0.chunk.js.map",
-    "static/js/3.9806a97b.chunk.js": "/react-gh-pages/static/js/3.9806a97b.chunk.js",
-    "static/js/3.9806a97b.chunk.js.map": "/react-gh-pages/static/js/3.9806a97b.chunk.js.map",
+    "main.js": "/react-gh-pages/static/js/main.0e8abd32.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.0e8abd32.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.818f1963.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.818f1963.js.map",
+    "static/js/2.c3921cd0.chunk.js": "/react-gh-pages/static/js/2.c3921cd0.chunk.js",
+    "static/js/2.c3921cd0.chunk.js.map": "/react-gh-pages/static/js/2.c3921cd0.chunk.js.map",
     "index.html": "/react-gh-pages/index.html",
     "static/css/main.5131aa9a.chunk.css.map": "/react-gh-pages/static/css/main.5131aa9a.chunk.css.map",
-    "static/js/2.a5fc89d0.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.a5fc89d0.chunk.js.LICENSE.txt",
+    "static/js/2.c3921cd0.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.c3921cd0.chunk.js.LICENSE.txt",
     "static/media/homeComponent.css": "/react-gh-pages/static/media/fon.d24c2aee.jpg",
+    "static/media/liubomyr_photo.332ec59f.jpg": "/react-gh-pages/static/media/liubomyr_photo.332ec59f.jpg",
     "static/media/mem1.356d857a.jpg": "/react-gh-pages/static/media/mem1.356d857a.jpg",
-    "static/media/mem2.6e334b7a.jpeg": "/react-gh-pages/static/media/mem2.6e334b7a.jpeg"
+    "static/media/mem2.6e334b7a.jpeg": "/react-gh-pages/static/media/mem2.6e334b7a.jpeg",
+    "static/media/mem3.baa73bca.png": "/react-gh-pages/static/media/mem3.baa73bca.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5d2b683f.js",
-    "static/js/2.a5fc89d0.chunk.js",
+    "static/js/runtime-main.818f1963.js",
+    "static/js/2.c3921cd0.chunk.js",
     "static/css/main.5131aa9a.chunk.css",
-    "static/js/main.f7d215b4.chunk.js"
+    "static/js/main.0e8abd32.chunk.js"
   ]
 }

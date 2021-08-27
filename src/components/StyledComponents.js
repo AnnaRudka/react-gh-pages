@@ -68,7 +68,7 @@ export const Button = styled.button`
   margin: 10px 0px;
   width: 100%;
   background-color: #1bdbf8;
-  border: none;
+  border: 2px solid #1bdbf8;
   outline: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -95,4 +95,48 @@ export const Copyright = styled.div`
   margin-top: 40px;
   font-size: 11px;
   color: rgb(126, 126, 126);
+`;
+
+export const AddPostContainer = styled.div`
+  width: 730px;
+  margin: 20px auto;
+  background-color: #121212;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 50px;
+  border: #adff2f 2px solid;
+  border-radius: 20px;
+  h3 {
+    margin: 10px;
+    text-align: center;
+    font-weight: 300;
+  }
+`;
+export const Textarea = styled.textarea`
+  resize: none;
+  overflow: auto;
+  padding: 15px 5px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #424242;
+  border-radius: 3px;
+  color: #fff;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+`;
+
+export const SelectorBlock = styled.div`
+  margin: 10px 0;
+  line-height: 1.3;
+  label {
+    color: rgb(161, 161, 161);
+    font-size: 14px;
+    padding-right: 10px;
+  }
+  select {
+    color: rgb(161, 161, 161);
+    background: transparent;
+    padding: 5px;
+ }
+  }
 `;

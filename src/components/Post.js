@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style/post.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,17 +9,44 @@ import {
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Post = ({
-  name,
-  photo,
-  nickname,
-  content,
-  image,
-  date,
-  comments,
-  reposts,
-  likes,
-}) => {
+const Post = ({ name, photo, nickname, content, image, date }) => {
+  const [comments, setComments] = useState(25);
+  const [commentsChange, setCommentsChange] = useState(true);
+  const [reposts, setReposts] = useState(45);
+  const [repostsChange, setRepostsChange] = useState(true);
+  const [likes, setLikes] = useState(15);
+  const [likesChange, setLikesChange] = useState(true);
+
+  const changeCommentsValue = () => {
+    !commentsChange
+      ? setComments((actualCount) => actualCount + 1)
+      : setComments((actualCount) => actualCount - 1);
+  };
+
+  useEffect(() => {
+    setCommentsChange(!commentsChange);
+  }, [comments]);
+
+  const changeRepostValue = () => {
+    !repostsChange
+      ? setReposts((actualCount) => actualCount + 1)
+      : setReposts((actualCount) => actualCount - 1);
+  };
+
+  useEffect(() => {
+    setRepostsChange(!repostsChange);
+  }, [reposts]);
+
+  const changeLikesValue = () => {
+    !likesChange
+      ? setLikes((actualCount) => actualCount + 1)
+      : setLikes((actualCount) => actualCount - 1);
+  };
+
+  useEffect(() => {
+    setLikesChange(!likesChange);
+  }, [likes]);
+
   return (
     <div className="container_item">
       <div className="post_container">
@@ -43,15 +70,15 @@ const Post = ({
           <img className="picture" src={image} alt="mem" />
         </div>
         <div className="post_details">
-          <div className="details-item">
+          <div className="details-item" onClick={changeCommentsValue}>
             <FontAwesomeIcon icon={faComment} className="icon" />
             <span>{comments}</span>
           </div>
-          <div className="details-item">
+          <div className="details-item" onClick={changeRepostValue}>
             <FontAwesomeIcon icon={faShare} className="icon" />
             <span>{reposts}</span>
           </div>
-          <div className="details-item">
+          <div className="details-item" onClick={changeLikesValue}>
             <FontAwesomeIcon icon={faHeart} className="icon" />
             <span>{likes}</span>
           </div>

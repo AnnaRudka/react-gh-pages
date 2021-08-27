@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style/contact-info.css";
 import RUDKA_PHOTO from "../images/anna_photo1.jpg";
 

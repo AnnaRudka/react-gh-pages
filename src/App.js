@@ -5,6 +5,7 @@ import Posts from "./components/Posts";
 import Contacts from "./components/Contacts";
 import HomeComponent from "./components/HomeComponent";
 import Photos from "./components/Photos";
+import AddPost from "./components/AddPost";
 import SignInForm from "./components/SignInForm";
 import SignUpForm from "./components/SignUpForm";
 import Navlink from "./components/NavLink";
@@ -15,6 +16,7 @@ import {
   faCamera,
   faAddressCard,
   faUnlockAlt,
+  faFileImport,
 } from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
@@ -28,26 +30,33 @@ const navLinks = [
   {
     id: 3,
     exact: "",
+    pass: "/addposts",
+    icon: <FontAwesomeIcon icon={faFileImport} />,
+    title: "ADD POST",
+  },
+  {
+    id: 4,
+    exact: "",
     pass: "/photos",
     icon: <FontAwesomeIcon icon={faCamera} />,
     title: "PHOTOS",
   },
   {
-    id: 4,
+    id: 5,
     exact: "",
     pass: "/contacts",
     icon: <FontAwesomeIcon icon={faAddressCard} />,
     title: "CONTACTS",
   },
   {
-    id: 5,
+    id: 6,
     exact: "",
     pass: "/signin",
     icon: <FontAwesomeIcon icon={faUnlockAlt} />,
     title: "SIGN IN",
   },
   {
-    id: 6,
+    id: 7,
     exact: "",
     pass: "/signup",
     icon: <FontAwesomeIcon icon={faUnlockAlt} />,
@@ -72,51 +81,6 @@ function App() {
           {navLinks.map((navlink) => (
             <Navlink {...navlink} key={navlink.id} />
           ))}
-          {/* <NavLink
-            exact
-            to="/"
-            className="link-item"
-            activeClassName="selected"
-          >
-            <FontAwesomeIcon icon={faHome} />
-            HOME
-          </NavLink>
-          <NavLink to="/posts" className="link-item" activeClassName="selected">
-            <FontAwesomeIcon icon={faClone} />
-            POSTS
-          </NavLink>
-          <NavLink
-            to="/photos"
-            className="link-item"
-            activeClassName="selected"
-          >
-            <FontAwesomeIcon icon={faCamera} />
-            PHOTOS
-          </NavLink>
-          <NavLink
-            to="/contacts"
-            className="link-item"
-            activeClassName="selected"
-          >
-            <FontAwesomeIcon icon={faAddressCard} />
-            CONTACTS
-          </NavLink>
-          <NavLink
-            to="/signin"
-            className="link-item"
-            activeClassName="selected"
-          >
-            <FontAwesomeIcon icon={faUnlockAlt} />
-            SIGN IN
-          </NavLink>
-          <NavLink
-            to="/signup"
-            className="link-item"
-            activeClassName="selected"
-          >
-            <FontAwesomeIcon icon={faUnlockAlt} />
-            SIGN UP
-          </NavLink> */}
         </nav>
         <Switch>
           <Route exact path="/">
@@ -124,6 +88,9 @@ function App() {
           </Route>
           <Route path="/posts">
             <Posts />
+          </Route>
+          <Route path="/addposts">
+            <AddPost />
           </Route>
           <Route path="/photos">
             <Photos />
